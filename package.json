@@ -1,0 +1,40 @@
+{
+  "name": "cypressautomation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "headedTest": "npx cypress run --headed",
+    "frameworkTest": "npx cypress run --spec cypress/integration/examples/TestFramework.js",
+    "recordDashboardTest": "npx cypress run --spec cypress/integration/examples/*.js --record --key 28eb898e-5eea-4074-853b-f041bf8df493",
+    "recordDashboardTestHeadedChrome": "npx cypress run --spec cypress/integration/examples/*.js --headed --browser chrome --record --key 28eb898e-5eea-4074-853b-f041bf8df493"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/results.json"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.1.2",
+    "@cypress/browserify-preprocessor": "^3.0.2",
+    "cypress": "^13.13.3",
+    "cypress-commands": "^3.0.0",
+    "cypress-iframe": "^1.0.1",
+    "cypress-mochawesome-reporter": "^3.8.2",
+    "cypress-sql-server": "^1.0.0",
+    "exceljs": "^4.4.0",
+    "mocha": "^10.7.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.3.0",
+    "mochawesome-report-generator": "^6.2.0",
+    "multiple-cucumber-html-reporter": "^3.7.0",
+    "neat-csv": "^5.1.0"
+  },
+  "dependencies": {
+    "convert-excel-to-json": "^1.7.0"
+  }
+}
